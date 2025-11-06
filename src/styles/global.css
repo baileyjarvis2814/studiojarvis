@@ -1,7 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@400;500&display=swap');
+
+:root {
+  --color-bg: #1e1e1e;
+  --color-text: #f5f5f5;
+  --color-accent: #e8b86d;
+  --color-highlight: #6ca0dc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    font-family: 'Helvetica Neue', sans-serif;
-    margin: 0;
-    background-color: #111;
-    color: #eee;
-  }
-  
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--color-accent);
+  letter-spacing: 1px;
+}
+
+a {
+  color: var(--color-highlight);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
