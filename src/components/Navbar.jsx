@@ -20,7 +20,7 @@ export default function Navbar() {
     justifyContent: "space-between",
     alignItems: "center",
     padding: "1rem 2rem",
-    maxWidth: "1200px",
+    maxWidth: "1600px",
     margin: "0 auto",
   };
 

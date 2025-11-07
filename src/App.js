@@ -56,11 +56,15 @@ function PageWrapper({ children }) {
 
 function App() {
   return (
+  <div className="app-container">
     <Router>
       <Navbar />
+      <main className="main-content">
       <AnimatedRoutes />
+      </main>
       <Footer />
     </Router>
+    </div>    
   );
 }
 
