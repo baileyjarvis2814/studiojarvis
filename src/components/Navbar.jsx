@@ -65,6 +65,7 @@ export default function Navbar() {
           <Link to="/portfolio" style={linkStyle}>Portfolio</Link>
           <Link to="/about" style={linkStyle}>About</Link>
           <Link to="/contact" style={linkStyle}>Contact</Link>
+          <Link to="/youtube" style={linkStyle}>YouTube</Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -83,9 +84,10 @@ export default function Navbar() {
       {isOpen && window.innerWidth <= 768 && (
         <div style={linkContainer}>
           <Link to="/" style={linkStyle} onClick={toggleMenu}>Home</Link>
+          <Link to="/about" style={linkStyle} onClick={toggleMenu}>About</Link>
           <Link to="/demos" style={linkStyle} onClick={toggleMenu}>Demos</Link>
           <Link to="/portfolio" style={linkStyle} onClick={toggleMenu}>Portfolio</Link>
-          <Link to="/about" style={linkStyle} onClick={toggleMenu}>About</Link>
+          <Link to="/youtube" style={linkStyle} onClick={toggleMenu}>YouTube</Link>
           <Link to="/contact" style={linkStyle} onClick={toggleMenu}>Contact</Link>
         </div>
       )}

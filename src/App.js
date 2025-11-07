@@ -8,6 +8,7 @@ import Demos from "./pages/Demos";
 import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import Login from "./pages/Login";
+import Youtube from "./pages/Youtube";
 import AdminDashboard from "./pages/AdminDashboard";
 import ProtectedRoute from "./components/ProtectedRoute";
 
@@ -24,6 +25,7 @@ function AnimatedRoutes() {
         <Route path="/portfolio" element={<PageWrapper><Portfolio /></PageWrapper>} />
         <Route path="/contact" element={<PageWrapper><Contact /></PageWrapper>} />
         <Route path="/login" element={<PageWrapper><Login /></PageWrapper>} />
+        <Route path="/youtube" element={<PageWrapper><Youtube /></PageWrapper>} /> 
 
         {/* Admin route (locked) */}
         <Route
