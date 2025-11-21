@@ -1,10 +1,12 @@
 import "./Demos.css";
+import studioSample from "../assets/audio/StudioSample.mp3";
 
 export default function Demos() {
   const demos = [
-    { title: "Commercial Demo", file: "/audio/commercial.mp3" },
-    { title: "Character Demo", file: "/audio/character.mp3" },
-    { title: "Narration Demo", file: "/audio/narration.mp3" },
+    { title: "Studio Demo", file: studioSample },
+    { title: "Commercial Demo(to be added)", file: "/audio/commercial.mp3" },
+    { title: "Character Demo(to be added)", file: "/audio/character.mp3" },
+    { title: "Narration Demo(to be added)", file: "/audio/narration.mp3" }
   ];
 
   return (

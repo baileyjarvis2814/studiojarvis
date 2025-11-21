@@ -1,7 +1,19 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import "./Youtube.css";
 
 export default function Youtube() {
+  const [useFallback, setUseFallback] = useState(false);
+
+  useEffect(() => {
+    // Try loading YouTube. If it doesn’t load, show fallback.
+    const timer = setTimeout(() => {
+      setUseFallback(true);
+    }, 3000); // 3-second timeout
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <motion.section
       className="youtube-container"
@@ -20,14 +32,30 @@ export default function Youtube() {
         </p>
 
         <div className="youtube-player-wrapper">
-          <iframe
-            className="youtube-player"
-            src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE"
-            title="StudioJarvis Sample Reel"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
+
+          {/* Fallback: Local video */}
+          {useFallback ? (
+            <video
+              className="youtube-player"
+              controls
+              autoPlay={false}
+            >
+              <source src="/videos/motionComicReel.mp4" type="video/mp4" />
+              Your browser does not support video playback.
+            </video>
+          ) : (
+            /* Default: YouTube iframe */
+            <iframe
+              className="youtube-player"
+              src="https://www.youtube.com/embed/Ibw1X64EjLc"
+              title="StudioJarvis Sample Reel"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              onError={() => setUseFallback(true)} // Immediate fallback if iframe errors
+            ></iframe>
+          )}
+
         </div>
       </div>
     </motion.section>
