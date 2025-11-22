@@ -8,7 +8,7 @@ export default function Contact() {
   const sendEmail = async (e) => {
     e.preventDefault();
   
-    const res = await fetch("https://studiojarvis-server-pi2t.onrender.com/", {
+    const res = await fetch("https://studiojarvis-server-pi2t.onrender.com/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({

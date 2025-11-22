@@ -8,12 +8,16 @@ const app = express();
 
 app.use(
     cors({
-        origin: ["https://studiojarvis.netlify.app/contact", "http://localhost:3000"], // React app
+        origin: ["https://studiojarvis.netlify.app", "http://localhost:3000"], // React app
       methods: ["GET", "POST", "OPTIONS"],
       allowedHeaders: ["Content-Type"],
     })
   );
 app.use(express.json());
+
+app.get("/", (req, res) => {
+    res.json({ message: "StudioJarvis backend is running." });
+  });
 
 app.use("/api/contact", contactRoute);
 
