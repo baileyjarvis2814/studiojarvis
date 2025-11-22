@@ -8,7 +8,7 @@ const app = express();
 
 app.use(
     cors({
-      origin: "http://localhost:3000", // React app
+        origin: ["https://your-netlify-url.netlify.app", "http://localhost:3000"], // React app
       methods: ["GET", "POST"],
       allowedHeaders: ["Content-Type"],
     })
