@@ -13,6 +13,9 @@ app.use(
       allowedHeaders: ["Content-Type"],
     })
   );
+
+app.options("*", cors());
+
 app.use(express.json());
 
 app.get("/", (req, res) => {
