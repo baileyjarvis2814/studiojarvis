@@ -8,7 +8,7 @@ export default function Contact() {
   const sendEmail = async (e) => {
     e.preventDefault();
   
-    const res = await fetch("http://localhost:5050/api/contact", {
+    const res = await fetch("https://studiojarvis-server-l4ou.onrender.com/", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
