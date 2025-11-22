@@ -8,8 +8,8 @@ const app = express();
 
 app.use(
     cors({
-        origin: ["https://https://studiojarvis.netlify.app/contact", "http://localhost:3000"], // React app
-      methods: ["GET", "POST"],
+        origin: ["//https://studiojarvis.netlify.app/contact", "http://localhost:3000"], // React app
+      methods: ["GET", "POST, OPTIONS"],
       allowedHeaders: ["Content-Type"],
     })
   );
