@@ -5,7 +5,6 @@ import { Resend } from "resend";
 
 dotenv.config();
 const router = express.Router();
-
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 router.post("/", async (req, res) => {
@@ -20,7 +19,7 @@ router.post("/", async (req, res) => {
     const { data, error } = await resend.emails.send({
       from: process.env.RESEND_FROM,   // Your verified sender
       to: process.env.RESEND_FROM,     // You receive the email
-      reply_to: email,
+      replyTo: email,
       subject: `New message from ${name}`,
       text: `
         Name: ${name}

@@ -8,7 +8,10 @@ const app = express();
 
 app.use(
     cors({
-        origin: ["https://studiojarvis.netlify.app", "http://localhost:3000"], // React app
+        origin: ["https://studiojarvisvo.com",
+      "https://www.studiojarvisvo.com",
+      "https://studiojarvis.netlify.app",
+      "http://localhost:3000"], // React app
       methods: ["GET", "POST", "OPTIONS"],
       allowedHeaders: ["Content-Type"],
     })
