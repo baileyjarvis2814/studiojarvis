@@ -18,7 +18,7 @@ router.post("/", async (req, res) => {
   try {
     const { data, error } = await resend.emails.send({
       from: process.env.RESEND_FROM,   // Your verified sender
-      to: process.env.RESEND_FROM,     // You receive the email
+      to: "baileyjarvis2814@gmail.com",     // You receive the email
       replyTo: email,
       subject: `New message from ${name}`,
       text: `
