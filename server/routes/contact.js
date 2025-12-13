@@ -29,9 +29,12 @@ router.post("/", async (req, res) => {
     });
 
     if (error) {
-      console.error("❌ Resend error:", error);
-      return res.status(500).json({ error: "Failed to send email" });
-    }
+        console.error("❌ Resend error details:", error);
+        return res.status(500).json({
+          error: "Resend failed",
+          details: error,
+        });
+      }
 
     console.log("✅ Email sent successfully via Resend:", data);
     res.status(200).json({ success: true, message: "Email sent successfully" });
