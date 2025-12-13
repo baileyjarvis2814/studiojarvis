@@ -37,6 +37,7 @@ export default function Contact() {
       <form ref={form} onSubmit={sendEmail} className="contact-form">
         <input type="text" name="name" placeholder="Your Name" required className="contact-input" />
         <input type="email" name="email" placeholder="Your Email" required className="contact-input" />
+        <input type="text" name="company" tabIndex="-1" autoComplete="off" style={{ display: "none" }} />
         <textarea name="message" placeholder="Your Message" required className="contact-textarea" />
         <button type="submit" className="contact-button">Send Message</button>
       </form>

@@ -8,7 +8,12 @@ const router = express.Router();
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 router.post("/", async (req, res) => {
-  const { name, email, message } = req.body;
+  const { name, email, message, company } = req.body;
+
+  //Honeypot check
+  if (company) {
+    return res.status(200).json({ success: true });
+}
 
   // Basic validation
   if (!name || !email || !message) {
